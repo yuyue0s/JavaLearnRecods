@@ -15,7 +15,7 @@ public class CycleExercise02 {
             int b = number%100/10;
             int c = number/100;
             if (number == ( a*a*a + b*b*b + c*c*c ) ){
-                //java语言中次方不可以用^ a的三次方a^3这样写是错误的 应该a*a*a
+                //a的三次方a^3这样写是错误的 应该a*a*a
                 System.out.println(number+"是一个水仙花数");
             }else System.out.println(number+"不是水仙花数");
         }else System.out.println(number+"不是水仙花数，提示：水仙花数是一个三位数的整数");
