@@ -11,33 +11,41 @@ public class ArrayExercise02 {
         for (int i = 0; i < 10; i++) {
             System.out.print(arr1[i] + " ");
         }
+        //倒序
         System.out.println();
-        int arr2[] = new int[arr1.length];
-        for(int i = 0; i < arr1.length; i++){
-            arr2[i] = arr1[arr1.length - 1 - i];
+        //写法1：
+//          int arr2[] = new int[arr1.length];
+//        for(int i = 0; i < arr1.length; i++){
+//            arr2[i] = arr1[arr1.length - 1 - i];
+//        }
+//        for(int i = 0;i < arr2.length; i++){
+//            System.out.print(arr2[i] + " ");
+//        }
+        //写法2：
+        for(int i = arr1.length - 1;i >= 0 ; i--){
+            System.out.print(arr1[i] + " ");
         }
-        for(int i = 0;i < arr2.length; i++){
-            System.out.print(arr2[i] + " ");
-        }
+
+
         int sum = 0; // 总数
         for(int i = 0;i < 10; i++){
-            sum += arr2[i];
+            sum += arr1[i];
         }
         System.out.println();
-        int averageSum = sum / arr2.length;
+        int averageSum = sum / arr1.length;
         System.out.println("平均值是" + averageSum);
-        int temp = arr2[0];; //设置一个变量去求最大值
+        int temp = arr1[0];; //设置一个变量去求最大值
         int num = 0; //记录下标
-        for(int i = 0; i < arr2.length - 1; i++){
-            if(temp < arr2[i + 1]){
-                temp = arr2[i + 1];
+        for(int i = 0; i < arr1.length - 1; i++){
+            if(temp < arr1[i + 1]){
+                temp = arr1[i + 1];
                 num = i + 1;
             }
         }
         System.out.println("最大值是" + temp + "下标为" + num);
         int index = -1;
-        for(int i = 0;i < arr2.length;i++){
-            if(arr2[i] == 8){
+        for(int i = 0;i < arr1.length;i++){
+            if(arr1[i] == 8){
                 index ++;
                 break;
             }
